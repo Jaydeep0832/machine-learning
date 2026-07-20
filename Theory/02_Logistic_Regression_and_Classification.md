@@ -7,13 +7,22 @@ While the name contains "regression", Logistic Regression is actually a fundamen
 In classification, we want our predictions to be probabilities between 0 and 1. Linear regression outputs can be any real number ($-\infty$ to $\infty$). To map these outputs to a probability, we pass the linear hypothesis through a **Sigmoid (or Logistic) Function**.
 
 **Sigmoid Function $g(z)$:**
-$$ g(z) = \frac{1}{1 + e^{-z}} $$
+
+$$
+g(z) = \frac{1}{1 + e^{-z}}
+$$
 
 **Hypothesis Function:**
-$$ h_\theta(x) = g(\theta^T x) = \frac{1}{1 + e^{-\theta^T x}} $$
+
+$$
+h_\theta(x) = g(\theta^T x) = \frac{1}{1 + e^{-\theta^T x}}
+$$
 
 This gives us the probability that $y=1$ given $x$, parameterized by $\theta$:
-$$ h_\theta(x) = P(y=1 | x; \theta) $$
+
+$$
+h_\theta(x) = P(y=1 | x; \theta)
+$$
 
 ## 2. Decision Boundary
 
@@ -29,26 +38,44 @@ We cannot use Mean Squared Error for logistic regression because applying the no
 
 Instead, we use the **Log Loss** (or Binary Cross-Entropy) cost function:
 
-$$ Cost(h_\theta(x), y) = \begin{cases} -\log(h_\theta(x)) & \text{if } y = 1 \\ -\log(1 - h_\theta(x)) & \text{if } y = 0 \end{cases} $$
+$$
+Cost(h_\theta(x), y) = \begin{cases} -\log(h_\theta(x)) & \text{if } y = 1 \\ -\log(1 - h_\theta(x)) & \text{if } y = 0 \end{cases}
+$$
 
 We can compress this into a single elegant equation:
-$$ Cost(h_\theta(x), y) = -y \log(h_\theta(x)) - (1 - y) \log(1 - h_\theta(x)) $$
+
+$$
+Cost(h_\theta(x), y) = -y \log(h_\theta(x)) - (1 - y) \log(1 - h_\theta(x))
+$$
 
 **Full Cost Function $J(\theta)$:**
-$$ J(\theta) = -\frac{1}{m} \sum_{i=1}^{m} [y^{(i)} \log(h_\theta(x^{(i)})) + (1 - y^{(i)}) \log(1 - h_\theta(x^{(i)}))] $$
+
+$$
+J(\theta) = -\frac{1}{m} \sum_{i=1}^{m} [y^{(i)} \log(h_\theta(x^{(i)})) + (1 - y^{(i)}) \log(1 - h_\theta(x^{(i)}))]
+$$
 
 ## 4. Gradient Descent
 
 Remarkably, the gradient descent update rule for logistic regression looks mathematically identical to the one for linear regression! The only difference is the definition of the hypothesis function $h_\theta(x)$.
 
 **Update Rule:**
-$$ \theta_j := \theta_j - \alpha \frac{1}{m} \sum_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) x_j^{(i)} $$
+
+$$
+\theta_j := \theta_j - \alpha \frac{1}{m} \sum_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) x_j^{(i)}
+$$
 
 ## 5. Multiclass Classification (One-vs-All)
 
 To classify data into more than two categories (e.g., $y \in \{0, 1, 2, ..., K\}$), we use the One-vs-All (One-vs-Rest) strategy:
 
 1. Train $K$ separate binary logistic regression classifiers, one for each class $i$ to predict the probability that $y=i$.
-   $$ h_\theta^{(i)}(x) = P(y=i | x; \theta) $$
+   
+$$
+h_\theta^{(i)}(x) = P(y=i | x; \theta)
+$$
+
 2. For a new input $x$, make a prediction by picking the class $i$ that maximizes the probability.
-   $$ \text{prediction} = \max_i ( h_\theta^{(i)}(x) ) $$
+   
+$$
+\text{prediction} = \max_i ( h_\theta^{(i)}(x) )
+$$
