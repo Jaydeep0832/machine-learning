@@ -37,12 +37,4 @@ The core concepts of Machine Learning are documented sequentially, focusing heav
 6. [Ensemble Learning (Bagging & Boosting)](./Theory/06-Ensemble-Learning.md)
 7. [Clustering & Unsupervised Learning](./Theory/07-Clustering-and-Unsupervised-Learning.md)
 
----
 
-## 🎯 Repository Goals
-1. **Beginner-Friendly yet Deep:** Start with intuition, end with mathematical proofs.
-2. **Industry-Oriented:** Focus on *why* and *when* to use algorithms in production, not just how to code them.
-3. **Interview-Ready:** Highlight common pitfalls and standard interview questions (like Bias-Variance tradeoffs and Metric Selection).
-
-> [!NOTE]
-> **Academic Archive:** Previous university coursework (Labs and Assignments) has been archived in the [`Academic-Archive`](./Academic-Archive/) directory to maintain the professional focus of this main repository.
