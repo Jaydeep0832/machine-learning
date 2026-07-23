@@ -37,6 +37,7 @@ $$
 $$
 
 Subject to: 
+
 $$
 y^{(i)}(w^T x^{(i)} + b) \geq 1 - \xi^{(i)}
 $$
