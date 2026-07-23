@@ -1,19 +1,26 @@
-# Machine Learning 🧠
+# 🧠 Machine Learning Knowledge Base
 
-This repository is a comprehensive log of my Machine Learning journey. It includes structured theoretical notes, mathematical derivations, and practical academic assignments.
+Welcome to my comprehensive, industry-oriented Machine Learning repository. 
 
-## 📖 Theory & Fundamentals
+This repository serves as a structured, beginner-friendly, and highly scalable knowledge base. It is designed to progress from basic intuition to mathematical rigor and industry-grade application. Whether you are preparing for an ML interview, looking for practical implementations, or starting from scratch, this guide provides a step-by-step curriculum.
 
-I have documented the core mathematical principles behind standard ML algorithms:
+## 🗂️ Curriculum Architecture
 
-1. **[Linear Regression & Gradient Descent](Theory/01_Linear_Regression_and_Gradient_Descent.md)**
-2. **[Logistic Regression & Classification](Theory/02_Logistic_Regression_and_Classification.md)**
-3. **[Support Vector Machines & Decision Trees](Theory/03_Support_Vector_Machines_and_Trees.md)**
-4. **[Clustering & Unsupervised Learning](Theory/04_Clustering_and_Unsupervised_Learning.md)**
+The repository is modularized into sequential learning phases. 
 
-## 🎓 Academic Work
+| Phase | Module | Status | Description |
+| :--- | :--- | :--- | :--- |
+| **01** | [**ML Fundamentals**](./01-ML-Fundamentals/README.md) | 🟢 Active | Core algorithms, evaluation metrics, and ensemble methods. |
+| **02** | **Speech Processing** | ⚪ Planned | Audio formats, MFCCs, Spectrograms, and feature extraction. |
+| **03** | **Deep Learning** | ⚪ Planned | PyTorch, CNNs, RNNs, Transformers, and Attention. |
+| **04** | **Speech AI Models** | ⚪ Planned | Whisper, TTS, Vocoders, and ASR architectures. |
+| **05** | **LLM + Speech Agents** | ⚪ Planned | Voice bots, RAG, Tool Calling, and LangChain. |
+| **06** | **MLOps & Deployment** | ⚪ Planned | Docker, FastAPI, TensorRT, and Cloud Deployment. |
 
-The `Academic_Work` directory contains my hands-on labs and assignments from my 6th Semester ML Course at PDEU:
+## 🎯 Repository Goals
+1. **Beginner-Friendly yet Deep:** Start with intuition, end with mathematical proofs.
+2. **Industry-Oriented:** Focus on *why* and *when* to use algorithms in production.
+3. **Interview-Ready:** Highlight common pitfalls and standard interview questions.
 
-- **[LABs](./Academic_Work/LAB)**: Practical implementations using Python, scikit-learn, and pandas.
-- **[Assignments](./Academic_Work/ASSIGNMENT)**: Theoretical exercises and applied ML problems.
+> [!NOTE]
+> **Academic Archive:** My previous university coursework (Labs and Assignments) has been archived in the [`Academic-Archive`](./Academic-Archive/) directory to maintain the professional focus of this main curriculum.
