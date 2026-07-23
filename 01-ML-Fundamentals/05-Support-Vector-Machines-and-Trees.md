@@ -22,8 +22,15 @@ $$
 y^{(i)}(w^T x^{(i)} + b) \geq 1 \quad \text{for all } i
 $$
 
+**What do these symbols mean?**
+* $w$ (Weight Vector): Determines the orientation of the hyperplane.
+* $b$ (Bias): Determines the offset of the hyperplane from the origin.
+* $x^{(i)}$: The features of a single data point.
+* $y^{(i)}$: The true label of that data point (either $+1$ or $-1$).
+* The formula essentially says: "Make sure every data point is correctly classified and sits outside the margin, while keeping the margin as wide as possible."
+
 ### Soft Margin (Handling Outliers)
-If data isn't perfectly separable, we introduce a regularization parameter $C$ and slack variables $\xi$:
+If data isn't perfectly separable, we introduce a regularization parameter $C$ and slack variables $\xi$ (xi):
 
 $$
 \min_{w,b,\xi} \frac{1}{2} ||w||^2 + C \sum_{i=1}^{m} \xi^{(i)}
@@ -34,8 +41,11 @@ $$
 y^{(i)}(w^T x^{(i)} + b) \geq 1 - \xi^{(i)}
 $$
 
-- **Large C**: Strict margin, lower bias, higher variance (prone to overfitting).
-- **Small C**: Soft margin, higher bias, lower variance (ignores outliers).
+**What do the new symbols mean?**
+* $\xi^{(i)}$ (Slack Variable): Represents the distance by which a specific data point is allowed to violate the margin. It allows some points to be on the wrong side to prevent the model from overfitting to outliers.
+* $C$ (Regularization Parameter): Controls the trade-off between maximizing the margin and minimizing the classification errors.
+  * **Large $C$**: Strict margin, heavily penalizes errors (lower bias, higher variance, prone to overfitting).
+  * **Small $C$**: Soft margin, ignores some outliers for a wider margin (higher bias, lower variance).
 
 ### Kernels (Non-linear SVM)
 When data is not linearly separable, SVM uses the "Kernel Trick" to project data into a higher-dimensional space where it *is* linearly separable, without actually computing the complex transformations.
