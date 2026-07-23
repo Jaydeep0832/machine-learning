@@ -31,11 +31,6 @@ The repository is modularized into sequential learning phases.
 | Phase | Module | Status | Description |
 | :--- | :--- | :--- | :--- |
 | **01** | [**ML Fundamentals**](./01-ML-Fundamentals/README.md) | 🟢 Active | Core algorithms, evaluation metrics, ensemble methods, and practical projects. |
-| **02** | **Speech Processing** | ⚪ Planned | Audio formats, MFCCs, Spectrograms, and feature extraction. |
-| **03** | **Deep Learning** | ⚪ Planned | PyTorch, CNNs, RNNs, Transformers, and Attention. |
-| **04** | **Speech AI Models** | ⚪ Planned | Whisper, TTS, Vocoders, and ASR architectures. |
-| **05** | **LLM + Speech Agents** | ⚪ Planned | Voice bots, RAG, Tool Calling, and LangChain. |
-| **06** | **MLOps & Deployment** | ⚪ Planned | Docker, FastAPI, TensorRT, and Cloud Deployment. |
 
 ---
 
